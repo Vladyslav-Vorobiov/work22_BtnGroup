@@ -9,15 +9,15 @@ class BtnGroup extends React.Component {
         }
     }
 
-    changeState = (boolean) => () => this.setState(({active}) => ({active: boolean}))
+    changeState = (btnPosition) => () => this.setState(({active}) => ({active: btnPosition}))
 
-    changeStateLeftBtn = this.changeState(true)
-    changeStateRightBtn = this.changeState(false)
+    changeStateLeftBtn = this.changeState('left')
+    changeStateRightBtn = this.changeState('right')
 
     render() {
 
-        const leftBtnClass = cn('btn btn-success left', {'active': this.state.active === true})
-        const RightBtnClass = cn('btn btn-success right', {'active': this.state.active === false})
+        const leftBtnClass = cn('btn btn-success left', {'active': this.state.active === 'left'})
+        const RightBtnClass = cn('btn btn-success right', {'active': this.state.active === 'right'})
 
         return (
             <div className="container-sm text-center mt-5">
