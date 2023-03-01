@@ -9,7 +9,7 @@ class BtnGroup extends React.Component {
         }
     }
 
-    changeState = (btnPosition) => () => this.setState(({active}) => ({active: btnPosition}))
+    changeState = (btnPosition) => () => this.setState({active: btnPosition})
 
     changeStateLeftBtn = this.changeState('left')
     changeStateRightBtn = this.changeState('right')
